@@ -1,0 +1,65 @@
+body {
+  padding: 5px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+  /*opacity: 0.2;*/
+}
+
+
+#container{
+	width : 55%;
+	margin: 0 auto;
+	padding: 20px;
+	
+}
+#myForm{
+	background-color: #f1f1f1;
+	opacity: 0.9;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+.f_e{
+	padding: 10px;
+}
+.f_e input {
+	background: rgba(255,255,255,0.8);
+	border : 1px solid rgba(234,234,234,0.8);
+	padding: 20px;
+	box-sizing: border-box;
+	
+}
+.nm{
+	display: inline-block;
+}
+
+.f_e input[placeholder]{
+	padding : 0px 15px;
+	font-size: 30px;
+	line-height: 40px;
+	color: #ccc;
+}
+/*
+::-webkit-input-placeholder{
+	color: #ccf0ff;
+}
+:-moz-placeholder { /* Firefox 18- */
+   /*color: #ccf0ff;  
+}
+
+::-moz-placeholder {*/  /* Firefox 19+ */
+/*   color: #ccf0ff;  
+}
+
+:-ms-input-placeholder {  
+   color: #ccf0ff;  
+}*/
+
+.button>button{
+	width: 60%;
+	color: #e7e9ea;
+	font-size: 30px;
+	background-color: #13232f;
+	padding: 10px 0;
+	border: 1px solid rgba(42,56,67,0.7);
+}
