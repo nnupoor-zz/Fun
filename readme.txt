@@ -1,0 +1,3 @@
+Good artists copy, Great artists Steal !!!
+
+Gearing up to steal...
