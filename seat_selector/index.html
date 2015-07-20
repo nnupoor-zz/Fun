@@ -1,0 +1,102 @@
+   <!DOCTYPE html>
+  <html  lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Seat Selector</title>
+    
+    
+    <link rel="stylesheet" type="text/css" href="stylesheets/vendors/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/vendors/bootstrap.css.map"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/vendors/font-awesome.min.css"/>
+
+    <script src="libs/jQuery.js" type="text/javascript"></script>
+    <script src="libs/bootstrap.min.js" type="text/javascript"></script>
+    <title>hello-backbonejs</title>
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+  <div id="wrapper">
+    <div class="page-header">
+      <h1>Select Seats</h1>
+    </div>
+    <div id="seatContainer">
+     <div id="ip_form">
+        <div class="form-inline">
+            <div class="form-group">
+              <label for="exampleInputName2">User Name</label>
+              <input type="text" class="form-control" id=" username" placeholder="Jane Doe">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputAmount">Seats Required</label>
+              <input type="text" class="form-control" id="seatsneeded" placeholder="...">
+            </div>
+            <label or="exampleInputAmount"> Seats Available: </label><span id="seatAvailable"></span>
+            <button  id="select_seats" class="btn btn-primary">Start Selecting</button>
+          </div> 
+     </div>
+      <div id="seat-list" class="inactive-list">
+        <div id='left' class="seats">
+        
+        </div>
+        <div id='right' class="seats">
+          
+        </div>
+      </div>
+      <div id="legend_class">
+       <label>Selected: </label><div class="legend selected-legend">&nbsp;</div>
+       <label>Available: </label><div class="legend available-legend">&nbsp;</div>
+       <label>Booked: </label><div class="legend booked-legend">&nbsp;</div>
+      <button id="confirm" class="btn btn-lg btn-primary">Confirm Selection</button>
+      </div>
+    </div>
+
+    <div id="tableContainer">
+      <table id="userDetails" class="table-striped">
+       
+      </table>
+    </div>
+    
+    <!-- <div class="alert alert-danger" role="alert">.</div> -->
+  </div>
+    <script id="seat-template" type="text/x-template">
+    {{#each this}}
+      <div class="st {{@index}}">
+        {{#each this}}
+          <a href="#" class="seat">  
+            <div class="{{className}} seat-div" id="{{row}}{{column}}" data-row="{{row}}" data-column="{{column}}" data-rowName="{{rowName}}" data-side="{{side}}" data-selected="{{isSelected}}" data-booked="{{isBooked}}">
+            </div>
+          </a>
+        {{/each}}
+    </div>
+     {{/each}}
+  </script>
+
+  <script id="table-template" type="text/x-template">
+    <tr>
+      <th>User Name</th>
+      <th>No of Tickets</th>
+      <th>Seat-Number</th>
+    </tr>
+    {{#each this}}
+      <tr>
+        <td>{{user_name}}</td>
+        <td>{{seats_booked}}</td>
+        <td>{{seat_id}}</td>
+      </tr>
+    {{/each }}   
+  </script>
+    
+    <script src="libs/jQuery.js"></script>
+    <script src="libs/handlebars.js"></script>
+    <script src="libs/underscore-min.js"></script>
+    <script src="libs/backbone.js"></script>
+    <script src="javascripts/model/seats.js"></script>
+    <script src="javascripts/views/app.js"></script>
+    <script src="javascripts/views/seatView.js"></script>
+    <script src="javascripts/views/tableView.js"></script>
+  
+  </body>
+  </html>
